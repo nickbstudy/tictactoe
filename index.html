@@ -4,13 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
   </head>
   <body>
 	  <div>something</div>
 <script>
 console.log('test');
+	
+/*
+GameBoard (module)
+	- player names
+	- spaces
+	Fn > mark
+--------------------
+Cell (factory function)
+	- coordinates
+	0 - empty
+	1 - player 1
+	2 - player 2
+---------------------
+GameActions (module)
+	- event listener
+	- write to DOM
+*/
+	
+const GameBoard = ((player1 = "Player 1", player2 = "Player 2") {
+	let board = []
+	for (let i = 0; i < 3; i++) {
+		for (let j = 0; j < 3; j++) {
+			board.push[]
+		}
+	}
+	
+	
+	const getBoard = () => {
+		return board;	
+	}
+})();
+	
+const Cell = (x, y) {
+	let occupiedBy = 0
+	
+	const takeSpot = (player) => {
+		occupied = player;
+		return occupied;
+	}
+	
+	const getSpot = () => {
+		return occupiedBy
+	}
+}
+	
+	
+	
+
 	
 	
 	
