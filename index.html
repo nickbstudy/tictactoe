@@ -9,7 +9,6 @@
   <body>
 	  <div>something</div>
 <script>
-console.log('test');
 	
 /*
 GameBoard (module)
@@ -18,7 +17,8 @@ GameBoard (module)
 	Fn > mark
 --------------------
 Cell (factory function)
-	- coordinates
+	- takeSpot
+	- getSpot
 	0 - empty
 	1 - player 1
 	2 - player 2
@@ -28,38 +28,69 @@ GameActions (module)
 	- write to DOM
 */
 	
-const GameBoard = ((player1 = "Player 1", player2 = "Player 2") {
+const GameBoard = ((player1 = "Player 1", player2 = "Player 2") => {
+	let rows = 3;
+	let columns = 3;	
 	let board = []
-	for (let i = 0; i < 3; i++) {
-		for (let j = 0; j < 3; j++) {
-			board.push[]
+	for (let i = 0; i < rows; i++) {
+		board[i] = []
+		for (let j = 0; j < columns; j++) {
+			board[i].push(Cell())
 		}
 	}
 	
 	
-	const getBoard = () => {
-		return board;	
+	const getBoard = () => board;
+	const takeSpot = (row, col, player) => {
+		if (board[row][col] == 0) {
+			board[row][col].takeSpot(player);
+		}
 	}
+
+	return { getBoard };
 })();
 	
-const Cell = (x, y) {
-	let occupiedBy = 0
+function Cell() {
+
+	let value = 0
 	
 	const takeSpot = (player) => {
-		occupied = player;
-		return occupied;
+		value = player;
 	}
 	
-	const getSpot = () => {
-		return occupiedBy
-	}
+	const getValue = () => value;
+
+	return { takeSpot, getValue };
 }
 	
-	
-	
+console.log(GameBoard.getBoard())
 
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 </script>
